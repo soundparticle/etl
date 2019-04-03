@@ -1,7 +1,7 @@
 import { transform } from './etl';
 
 describe('Transform', () => {
-  test('transforms one value', () => {
+  xtest('transforms one value', () => {
     const old = { 1: ['A'] };
     const expected = { a: 1 };
 
@@ -17,7 +17,7 @@ describe('Transform', () => {
     expect(transform(old)).toEqual(expected);
   });
 
-  xtest('transforms more keys', () => {
+  test('transforms more keys', () => {
     const old = { 1: ['A', 'E'], 2: ['D', 'G'] };
     const expected = {
       a: 1, e: 1, d: 2, g: 2,
